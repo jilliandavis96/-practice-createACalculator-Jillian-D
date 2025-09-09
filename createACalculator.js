@@ -24,9 +24,8 @@ function randomNumber(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 //6. Custom Rounding
-function customRound(num, decimalPlaces){
-   let factor = Math.pow(10, decimalPlaces);
-   return Math.round(num * factor) / factor;
+function roundToDecimals(number, decimals) {
+    return Number(number.toFixed(decimals));
 };
 
 //Step 2: Test Each Function:
@@ -37,7 +36,7 @@ console.log("Square root of 49:", squareRoot(49));
 console.log("Maximum from [31, 58, -2, 0.55, 7]:", findMaximum([31, 58, -2, 0.55, 7]));
 console.log("Minimum from [5, 28, -25, 0.73, 71]:", findMinimum([5, 28, -25, 0.73, 71]));
 console.log("Random number between 1 and 30:", randomNumber(1, 30));
-console.log("85.8837403 rounded to 2 decimal places:", customRound(85.8837403, 2));
+console.log("85.8837403 rounded to 2 decimal places:", roundToDecimals(85.8837403, 2));
 
 //Step 3: Calculator Object
 let calculator = {
